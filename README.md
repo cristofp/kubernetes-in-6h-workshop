@@ -1,6 +1,6 @@
 # Workshop Info
 
-This repository will contain materials for workshop "Kubernetes… and being a DevOps is not a fairytale anymore" on sphere.it conference in 2019.
+This repository contains materials for workshop "Kubernetes… and being a DevOps is not a fairytale anymore" on sphere.it conference in 2019.
 
 Atendees are asked to bring their own laptops with prepared environment according to instructions enclosed in section below.
 Basic familiarity with Docker and containerization is expected.
