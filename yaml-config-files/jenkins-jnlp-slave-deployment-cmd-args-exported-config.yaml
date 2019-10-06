@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: my-jenkins-slave
+  name: my-jenkins-slave
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: my-jenkins-slave
+  template:
+    metadata:
+      labels:
+        run: my-jenkins-slave
+    spec:
+      containers:
+        - image: jenkins/jnlp-slave
+          name: my-jenkins-slave
+          resources: {}
+          args: [-url,http://10.104.75.83:8080, $(JENKINS_SECRET), $(JENKINS_AGENT_NAME)]
+          envFrom:
+          - configMapRef:
+             name: jenkins-agent1-config

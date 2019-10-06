@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: my-jenkins
+  name: my-jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: my-jenkins
+  template:
+    metadata:
+      labels:
+        run: my-jenkins
+    spec:
+      containers:
+      - image: jenkins
+        name: my-jenkins
+        ports:
+        - containerPort: 8080
+        - containerPort: 50000
+        resources: {}

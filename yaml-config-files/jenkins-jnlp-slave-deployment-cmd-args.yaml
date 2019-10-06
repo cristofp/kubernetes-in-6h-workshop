@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: my-jenkins-slave
+  name: my-jenkins-slave
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: my-jenkins-slave
+  template:
+    metadata:
+      labels:
+        run: my-jenkins-slave
+    spec:
+      containers:
+        - image: jenkins/jnlp-slave
+          name: my-jenkins-slave
+          resources: {}
+          args: [-url,http://10.104.75.83:8080, f9b42f4d8f1eee708f5d70b5731583472bf3cdcb169afe185a27eec5d2c009ea,agent1]
