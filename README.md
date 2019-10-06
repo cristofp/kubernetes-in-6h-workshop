@@ -27,4 +27,8 @@ KubeDNS is running at https://172.17.85.7:8443/api/v1/namespaces/kube-system/ser
    
 ### 2. Install docker
 Install docker on your local machine accoring to instructions on [docker page](https://docs.docker.com/install/)
-  
+ 
+
+
+## Feedback
+I'd be very grateful for you feedback after workshop: https://forms.gle/dS9JGCF2kdfgYevs9
