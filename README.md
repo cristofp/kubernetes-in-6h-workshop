@@ -2,10 +2,9 @@
 
 This repository contains materials for workshop "Start using Kubernetes as Developer in 6h".
 
-Atendees are asked to bring their own laptops with prepared environment according to instructions enclosed in section below.
-Basic familiarity with Docker and containerization is expected.
+Workshop is dedicated to software developers with no or little knowledge about Kubernetes. However, basic familiarity with containerization and Docker is expected.
 
-This repository will be updated with further materials on workshop day.
+Atendees are asked to bring their own laptops with prepared environment according to instructions enclosed in section below.
 
 ## Local envorionment setup
 
