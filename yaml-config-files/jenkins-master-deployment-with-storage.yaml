@@ -12,10 +12,16 @@ spec:
       labels:
         run: my-jenkins
     spec:
+      volumes:
+        - name: jenkins-storage
+          persistentVolumeClaim:
+            claimName: jenkins-pvc-dynamic
       containers:
       - image: jenkins
         name: my-jenkins
         ports:
         - containerPort: 8080
         - containerPort: 50000
-        resources: {}
+        volumeMounts:
+        - mountPath: "/var/jenkins_home"
+          name: jenkins-storage

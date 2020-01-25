@@ -1,14 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: httpd-pvc
+  name: jenkins-pvc-dynamic
 spec:
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
-  volumeMode: Filesystem
   resources:
     requests:
-      storage: 2Gi
-  selector:
-    matchLabels:
-      release: "stable"
+      storage: 3Gi

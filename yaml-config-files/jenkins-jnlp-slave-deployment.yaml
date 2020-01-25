@@ -1,8 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    run: my-jenkins-slave
   name: my-jenkins-slave
 spec:
   replicas: 1
@@ -17,11 +15,10 @@ spec:
       containers:
         - image: jenkins/jnlp-slave
           name: my-jenkins-slave
-          resources: {}
           env:
             - name: JENKINS_URL
-              value: http://10.108.201.173:8080
+              value: http://10.106.10.243:8080
             - name: JENKINS_SECRET
-              value: fae549698c994966c4ee215a710dfa942d3195b6cc0648c1320a7179b8844986
+              value: 04c47064a5e0954def8a02cd894a2f8664d6c08a0d57940afec804d3c7d9211e
             - name: JENKINS_AGENT_NAME
-              value: agent1
+              value: slave1
